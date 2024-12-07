@@ -36,7 +36,7 @@ conda activate moonshot
 
 Для того, чтобы установить все остальные зависимости, выполните следующую команду, находясь в корневой директории данного репозитория:
 ```
-pip install -e .
+pip install -e.
 ```
 
 Также установите jupyter-ядро, для того чтобы использовать установленные пакеты в jupyter-ноутбуках:
@@ -63,7 +63,7 @@ from moonshot.image_processor import ImageProcessor
 
 # model - это объект класса timm.models.vision_transformer.VisionTransformer c подгруженными предобученными весами.
 # Его можно использовать как вставной модуль в моделях для классификации, сегментации или других задач.
-model = moonshot(model_filepath='/path/to/moonshot.pt')  # требуется передать путь до загруженного файла `moonshot.pt`
+model = moonshot(model_filepath='D:/moonshot.pt')  # требуется передать путь до загруженного файла `moonshot.pt`
 
 # image_processor - это объект, который отвечает за препроцессинг изображений,
 # который необходим перед тем как подавать их в модель
