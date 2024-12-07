@@ -26,7 +26,7 @@ Moonshot — это нейросеть, которая была обучена �
 
 Мы рекомендуем установить пакетный менеджер `Miniconda`, следуя инструкциям на [сайте](https://docs.anaconda.com/miniconda/), и создать отдельный `conda environment`:
 ```
-conda create -n moonshot python=3.12
+conda create -n moonshot python=3.10
 conda activate moonshot
 ```
 
