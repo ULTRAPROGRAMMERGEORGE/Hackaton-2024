@@ -13,7 +13,7 @@ import cv2
 import pydicom
 import numpy as np
 import os
-
+from catboost import CatBoostClassifier
 
 # --- 1. Настройка устройства ---
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -95,7 +95,7 @@ def train_model(model, train_loader, epochs=10, lr=1e-4):
 # --- 6. Основной код ---
 if __name__ == "__main__":
     # Пути к данным
-    data_dir = Path(r"D:\ДанныеHacaton\ds_clav_fracture_train_good\block_0000_anon")
+    data_dir = Path(r"D:\ds_clav_fracture_train_good\block_0000_anon")
     image_paths = list(data_dir.rglob("*.dcm"))  # Рекурсивный поиск DICOM файлов
     print(f"Found {len(image_paths)} DICOM files.")  # Проверяем количество файлов
 
